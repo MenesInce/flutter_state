@@ -1,4 +1,7 @@
+import 'package:calisma_yapisi/view/game_page.dart';
 import 'package:flutter/material.dart';
+import '../entity/person.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -25,6 +28,12 @@ class _HomePageState extends State<HomePage> {
                   });
                 },
                 child: const Icon(Icons.touch_app_outlined)),
+            ElevatedButton(
+                onPressed: () {
+                  var person = Person(name: "Melis", age: 25, height: 1.65, isWork: true);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => GamePage(person:person)));
+                },
+                child: const Text("START"))
           ],
         ),
       ),
