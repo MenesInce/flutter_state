@@ -1,3 +1,4 @@
+import 'package:calisma_yapisi/user_interaction/snacbar_alert.dart';
 import 'package:calisma_yapisi/view/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -23,12 +24,12 @@ class MyApp extends StatelessWidget {
               fontSize: 20),
           color: Colors.yellow[300],
           centerTitle: true,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
 
         ),
+        snackBarTheme: const SnackBarThemeData(backgroundColor: Colors.red),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const BottomNavigationPage(),
+      home: const UserInteraction(),
     );
   }
 }
